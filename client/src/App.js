@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegisterComponent from "./Register/RegisterComponets";
 import LoginComponent from "./Login/LoginComponets";
+import HomeComponets from "./Home/HomeComponets";
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -14,6 +15,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
+          <Route path="home" element={<HomeComponets/>} />
           <Route path="register" element={<RegisterComponent/>} />
           <Route path="login" element={<LoginComponent/>} />
         </Routes>
